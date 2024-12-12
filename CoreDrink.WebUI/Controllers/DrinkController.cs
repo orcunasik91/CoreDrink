@@ -15,10 +15,9 @@ namespace CoreDrink.WebUI.Controllers
         }
         public ViewResult List()
         {
-            ViewBag.Name = "DotNet, Nedir?";
             DrinkListViewModel vm = new DrinkListViewModel();
             vm.Drinks = _drinkRepository.Drinks;
-            vm.CurrentCategory = "DrinkCategory";
+            vm.CurrentCategory = "İçecek Kategorisi";
             return View(vm);
         }
     }

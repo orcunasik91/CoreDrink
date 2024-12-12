@@ -1,13 +1,38 @@
-﻿@using CoreDrink.WebUI.ViewModels
-@model DrinkListViewModel
+﻿@model DrinkListViewModel
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "İçecekler";
+}
 <div>
     <h3>İçecek Listesi</h3>
 </div>
-<h1>@Model.CurrentCategory</h1>
-@foreach (var drink in Model.Drinks)
-{
-    <div>
-        <h4>İçecek: @drink.Name</h4>
-        <p>Price: @drink.Price₺</p>
-    </div>
-}
+
+<div>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>İçecek</th>
+                <th>Kategori</th>
+                <th>Fiyat</th>
+                <th>Not</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 1;
+                foreach (var drink in Model.Drinks)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@drink.Name</td>
+                        <td>@drink.Category.CategoryName</td>
+                        <td>@drink.Price₺</td>
+                        <td>@drink.ShortDescription</td>
+                    </tr>
+                    i++;
+                }
+            }
+        </tbody>
+    </table>
+</div>
