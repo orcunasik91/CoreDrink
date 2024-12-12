@@ -1,4 +1,5 @@
 ﻿using CoreDrink.WebUI.Data.Interfaces;
+using CoreDrink.WebUI.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreDrink.WebUI.Controllers
@@ -14,8 +15,11 @@ namespace CoreDrink.WebUI.Controllers
         }
         public ViewResult List()
         {
-            var drinks = _drinkRepository.Drinks;
-            return View(drinks);
+            ViewBag.Name = "DotNet, Nedir?";
+            DrinkListViewModel vm = new DrinkListViewModel();
+            vm.Drinks = _drinkRepository.Drinks;
+            vm.CurrentCategory = "DrinkCategory";
+            return View(vm);
         }
     }
 }
