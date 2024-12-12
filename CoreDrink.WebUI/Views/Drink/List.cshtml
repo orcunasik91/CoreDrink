@@ -1,9 +1,10 @@
-﻿@using CoreDrink.WebUI.Data.Models
-@model IEnumerable<Drink>
+﻿@using CoreDrink.WebUI.ViewModels
+@model DrinkListViewModel
 <div>
     <h3>İçecek Listesi</h3>
 </div>
-@foreach (Drink drink in Model)
+<h1>@Model.CurrentCategory</h1>
+@foreach (var drink in Model.Drinks)
 {
     <div>
         <h4>İçecek: @drink.Name</h4>
