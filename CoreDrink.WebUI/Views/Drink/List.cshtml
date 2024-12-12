@@ -1,0 +1,12 @@
+﻿@using CoreDrink.WebUI.Data.Models
+@model IEnumerable<Drink>
+<div>
+    <h3>İçecek Listesi</h3>
+</div>
+@foreach (Drink drink in Model)
+{
+    <div>
+        <h4>İçecek: @drink.Name</h4>
+        <p>Price: @drink.Price₺</p>
+    </div>
+}
