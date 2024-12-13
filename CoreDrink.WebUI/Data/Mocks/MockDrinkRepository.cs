@@ -25,7 +25,7 @@ namespace CoreDrink.WebUI.Data.Mocks
                         ImageUrl = "https://www.hukins-hops.co.uk/wp-content/uploads/2024/04/what-is-the-percentage-alcohol-in-beer.jpg",
                         InStock = true,
                         IsPreferredDrink = true,
-                        ImageThumbnailUrl = "https://hips.hearstapps.com/del.h-cdn.co/assets/cm/15/11/3200x3272/54f65d39ab05d_-_183341797.jpg?resize=640:*"
+                        ImageThumbnailUrl = "https://minuman.com/cdn/shop/articles/Everything-You-Need-to-Know-About-Beer-2.jpg"
                     },
                     new Drink
                     {
@@ -37,7 +37,7 @@ namespace CoreDrink.WebUI.Data.Mocks
                         ImageUrl = "https://media.diageocms.com/eyJrZXkiOiJtZWRpYS9tNHNua2Z4eS9iYXJjb21fc2VydmVfaW1hZ2VfMTU0MDc2MF9jYXB0YWlubW9yZ2FucnVtY29sYS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiaGVpZ2h0Ijo2MTAsIndpZHRoIjo2MTB9fX0=",
                         InStock = true,
                         IsPreferredDrink = false,
-                        ImageThumbnailUrl = "https://blog-assets.lightspeedhq.com/img/2021/11/a488ea02-36_bartenders-share-secrets-ultimate-rum-coke_01-hero.jpg"
+                        ImageThumbnailUrl = "https://thegastromagazine.com/wp-content/uploads/2023/05/How-To-Make-A-Bubbly-And-Refreshing-Rum-Cola-Cocktail.jpg"
                     },
                     new Drink
                     {
@@ -49,7 +49,7 @@ namespace CoreDrink.WebUI.Data.Mocks
                         ImageUrl = "https://www.gurmerehberi.com/wp-content/uploads/2021/10/Bir-Tequila-Sour-kokteyli-klasik-ve-zarif-bir-sunumla.-Kokteyl-5-cl-tequila-3-cl-taze-sikilmis-limon-suyu-ve-15-cl-seker-surubu-karisimindan-olusu.png",
                         InStock = true,
                         IsPreferredDrink = false,
-                        ImageThumbnailUrl = "https://wevino.store/cdn/shop/products/2052-Tequila-Jose-Cuervo-Especial-Gold-Reposado_170a059b-a9fd-44ff-85fc-e4ba6d5bb575.jpg?v=1710711151"
+                        ImageThumbnailUrl = "https://olmecaaltos.com/wp-content/uploads/2024/02/fake-tequila-1.webp"
                     },
                     new Drink
                     {
