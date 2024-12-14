@@ -1,5 +1,5 @@
 ﻿@model DrinkListViewModel
-@{ 
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "İçecekler";
 }
@@ -7,16 +7,9 @@
     <h3>İçecek Listesi</h3>
 </div>
 
-@foreach (var drink in Model.Drinks)
-{
-    <div class="col-sm-4 col-lg-4 col-md-4">
-        <div class="thumbnail">
-            <img src="@drink.ImageThumbnailUrl" alt="" style="width:100%;height:112.9px;"/>
-            <div class="caption">
-                <h3 class="pull-right">@drink.Price₺</h3>
-                <h3>@drink.Name</h3>
-                <p>@drink.ShortDescription</p>
-            </div>
-        </div>
-    </div>
+@{
+    foreach (Drink drink in Model.Drinks)
+    {
+        @await Html.PartialAsync("DrinksSummary",drink)
+    }
 }
