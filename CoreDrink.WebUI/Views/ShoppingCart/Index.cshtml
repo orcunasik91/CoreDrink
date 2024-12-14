@@ -1,0 +1,54 @@
+﻿@model ShoppingCartViewModel
+
+<div class="row checkoutForm">
+    <h2>Alışveriş Sepetiniz</h2>
+    <h4>Sepetinizdeki Ürünleriniz</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Seçili Miktar</th>
+                <th>İçecek</th>
+                <th class="text-right">Fiyat</th>
+                <th class="text-right">Toplam Tutar</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ShoppingCartItem line in Model.ShoppingCart.ShoppingCartItems)
+            {
+                <tr>
+                    <td class="text-center">@line.Amount</td>
+                    <td class="text-left">@line.Drink.Name</td>
+                    <td class="text-right">@line.Drink.Price₺</td>
+                    <td class="text-right">
+                        @((line.Amount * line.Drink.Price))₺
+                    </td>
+                    <td class="text-center"><a class="glyphicon glyphicon-remove text-danger remove" asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-drinkId="@line.Drink.DrinkId"></a></td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Toplam Tutar:</td>
+                <td class="text-right">
+                    @Model.ShoppingCartTotal₺
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="text-right">
+        <div class="btn-group ">
+            <a class="btn btn-success" asp-controller="Order" asp-action="Checkout">Satın Al</a>
+            <a class="btn-group">
+                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Alışverişe Devam Et<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a asp-controller="Drink" asp-action="List" asp-route-category="Alkollü">Alkollü</a></li>
+                    <li><a asp-controller="Drink" asp-action="List" asp-route-category="Alkolsüz">Alkolsüz</a></li>
+                </ul>
+            </a>
+        </div>
+    </div>
+</div>
