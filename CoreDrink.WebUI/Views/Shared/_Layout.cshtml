@@ -26,10 +26,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Drink" asp-action="List" class="navbar-brand">Core Drink Project</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Core Drink Project</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li><a class="btn btn-block" asp-area="" asp-controller="Home" asp-action="Index">Ana sayfa</a></li>
+                    <li><a class="btn btn-block" asp-area="" asp-controller="Contact" asp-action="Index">İletişim</a></li>
                     @await Component.InvokeAsync("ShoppingCartSummary")
                 </ul>
             </div>
