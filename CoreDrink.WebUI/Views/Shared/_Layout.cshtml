@@ -29,6 +29,9 @@
                 <a asp-area="" asp-controller="Drink" asp-action="List" class="navbar-brand">Core Drink Project</a>
             </div>
             <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @await Component.InvokeAsync("ShoppingCartSummary")
+                </ul>
             </div>
         </div>
     </nav>
