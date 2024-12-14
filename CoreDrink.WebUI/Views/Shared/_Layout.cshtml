@@ -11,7 +11,7 @@
     </environment>
     <environment exclude="Development"> 
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
@@ -31,6 +31,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a class="btn btn-block" asp-area="" asp-controller="Home" asp-action="Index">Ana sayfa</a></li>
+                    @await Component.InvokeAsync("CategoryMenu")
                     <li><a class="btn btn-block" asp-area="" asp-controller="Contact" asp-action="Index">İletişim</a></li>
                     @await Component.InvokeAsync("ShoppingCartSummary")
                 </ul>
