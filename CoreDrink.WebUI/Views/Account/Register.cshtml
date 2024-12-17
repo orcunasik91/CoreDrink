@@ -1,0 +1,29 @@
+﻿@model LoginViewModel
+@{ViewData["Title"] = "Kayıt Paneli";}
+<div class="row loginForm">
+    <div class="col-md-8 col-md-offset-2">
+        <h2>CoreDrink'e Şimdi Kayıt Olun</h2>
+        <form asp-controller="Account" asp-action="Register" method="post" class="form-horizontal" role="form">
+            <hr />
+            <div class="form-group">
+                <label asp-for="UserName" class="col-md-2 control-label">Kullanıcı Adı</label>
+                <div class="col-md-10">
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="col-md-2 control-label">Parola</label>
+                <div class="col-md-10">
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group pull-right formPullRightButton">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-success " value="Kayıt Ol" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
