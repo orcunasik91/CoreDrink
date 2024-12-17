@@ -1,5 +1,6 @@
 ﻿using CoreDrink.WebUI.Data.Interfaces;
 using CoreDrink.WebUI.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreDrink.WebUI.Controllers
@@ -15,11 +16,13 @@ namespace CoreDrink.WebUI.Controllers
             _shoppingCart = shoppingCart;
         }
         [HttpGet]
+        [Authorize]
         public IActionResult Checkout()
         {
             return View();
         }
         [HttpPost]
+        [Authorize]
         public IActionResult Checkout(Order order)
         {
             var items = _shoppingCart.GetShoppingCartItems();
